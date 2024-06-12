@@ -1,0 +1,953 @@
+/* Réinitialisation des marges et des rembourrages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Style du corps de la page */
+body {
+  font-family: Poppins, sans-serif; /* Définit la police du texte */
+  display: flex; /* Utilise un layout flexible */
+  justify-content:center; /* Centre le contenu horizontalement */
+  height: 100%; /* Hauteur totale */
+  width: 100%; /* Largeur totale */
+  align-items: center; /* Centre le contenu verticalement */
+  background-color: #faf6e9; /* Couleur de fond */
+  flex-direction: column; /* Direction des éléments flexibles */
+  color: #141318; /* Couleur du texte */
+}
+
+/* Style du menu du haut */
+.box01 {
+  position: fixed; /* Position fixe */
+  top: 0; /* En haut de la page */
+  background:#2c5d63; /* Couleur de fond */
+  display: flex; /* Utilise un layout flexible */
+  justify-content: flex-end; /* Aligne les éléments à la fin */
+  width: 100%; /* Largeur totale */
+  height:4rem; /* Hauteur fixe */
+}
+
+/* Style du bouton de connexion */
+.connect{
+  background-color:rgb(247, 111, 62) ; /* Couleur de fond */
+  color: #2c5d63; /* Couleur du texte */
+}
+
+
+/* Style du menu du haut */
+.menutop{
+  display: flex; /* Utilise un layout flexible */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: flex-start; /* Aligne les éléments au début */
+}
+
+/* Style du titre */
+.titre{
+  margin-top: 10px; /* Marge en haut */
+  font-size: 18px; /* Taille de la police */
+  flex-direction: column; /* Direction des éléments flexibles */
+  display: flex; /* Utilise un layout flexible */
+  justify-content: space-around; /* Espacement égal entre les éléments */
+  left: 0; /* À gauche de la page */
+  top: 0; /* En haut de la page */
+  position: fixed; /* Position fixe */
+  margin-left: 80px; /* Marge à gauche */
+  color: white; /* Couleur du texte */
+  padding-left: 20px; /* Rembourrage à gauche */
+  font-family: 'NomDeLaPolice', serif; /* Police du texte */
+}
+
+/* Style du logo  */
+.logo{
+  width: 60px; /* Largeur fixe */
+  height: auto; /* Hauteur automatique */
+  display: flex; /* Utilise un layout flexible */
+  justify-content: space-around; /* Espacement égal entre les éléments */
+  left: 0; /* À gauche de la page */
+  top: 0; /* En haut de la page */
+  position: fixed; /* Position fixe */
+  margin-left: 10px; /* Marge à gauche */
+}
+
+/* Style de la navigation */
+.navigation {
+  max-width: 40rem; /* Largeur maximale */
+  width: 100%; /* Largeur totale */
+  display: flex; /* Utilise un layout flexible */
+  flex-direction: row; /* Direction des éléments flexibles */
+  list-style-type: none; /* Pas de puces pour la liste */
+  align-items: center; /* Centre les éléments verticalement */
+}
+
+/* Style des éléments de la liste de navigation */
+.navigation>li {
+  position: relative; /* Position relative par rapport à l'élément parent */
+  transition: all 0.5s ease; /* Transition douce pour tous les changements de propriété */
+  flex-grow: 1; /* Permet à l'élément de grandir pour occuper l'espace disponible */
+  user-select: none; /* Empêche l'utilisateur de sélectionner le texte */
+}
+
+/* Style des liens de la navigation */
+.navigation a {
+  display: flex; /* Utilise un layout flexible */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  text-align: center; /* Centre le texte */
+  padding: 0.75rem 1.5rem; /* Rembourrage autour du texte */
+  color: white; /* Couleur du texte */
+  min-height: 4rem; /* Hauteur minimale */
+  font-weight: bold; /* Gras pour le texte */
+  letter-spacing: 0.1rem; /* Espacement entre les lettres */
+  text-decoration: none; /* Pas de soulignement pour le lien */
+  background-image: linear-gradient(to right, #24ce8f, #24ce8f 50%, white 50%); /* Dégradé en arrière-plan */
+  background-size: 200% 100%; /* Taille de l'image d'arrière-plan */
+  background-position: -100%; /* Position de l'image d'arrière-plan */
+  -webkit-background-clip: text; /* Clip de l'arrière-plan sur le texte */
+  -webkit-text-fill-color: transparent; /* Couleur de remplissage du texte */
+  transition: all 0.7s ease; /* Transition douce pour tous les changements de propriété */
+  gap: 0.25rem; /* Espacement entre les éléments flexibles */
+}
+
+/* Style lors du survol d'un lien dans la navigation */
+.navigation a:hover {
+  background-position: 0; /* Change la position de l'arrière-plan à 0 */
+}
+
+/* Style lors du survol d'un élément de liste dans la navigation */
+.navigation li:hover {
+  background: #79797920; /* Change la couleur de fond */
+}
+
+/* Style lors du survol d'un lien dans un élément de liste dans la navigation */
+.navigation>li:hover>a {
+  background-position: 0; /* Change la position de l'arrière-plan à 0 */
+}
+
+/* Style pour les SVG dans un lien dans un élément de liste dans la navigation */
+.navigation>li>a>svg {
+  width: 1rem; /* Largeur fixe */
+  height: 1rem; /* Hauteur fixe */
+  transition: all 0.7s ease; /* Transition pour tous les changements */
+}
+
+/* Style lors du survol d'un SVG dans un lien dans un élément de liste dans la navigation */
+.navigation>li:hover>a>svg {
+  stroke: var(#24ce8f); /* Change la couleur du trait */
+  transform: rotate(90deg); /* Tourne l'élément de 90 degrés */
+}
+
+/* Style du conteneur du sous-menu */
+.subnavigation__wrapper {
+  overflow: hidden; /* Cache le contenu débordant */
+  max-height: 0; /* Hauteur maximale initiale */
+  position: absolute; /* Position absolue */
+  transition: max-height 0.3s ease-in-out; /* Transition pour l'expansion */
+  background-color:#141318; /* Couleur de fond */
+  width: 100%; /* Largeur totale */
+  background-color: #2c5d63; /* Couleur de fond (répétée) */
+}
+
+/* Style lors du survol d'un élément de liste dans la navigation pour le conteneur du sous-menu */
+.navigation>li:hover .subnavigation__wrapper {
+  max-height: 20rem; /* Hauteur maximale lors du survol */
+  top: 4rem; /* Position en haut lors du survol */
+  display: flex; /* Utilise un layout flexible lors du survol */
+  gap: 1rem; /* Espacement entre les éléments lors du survol */
+  flex-direction: column; /* Direction des éléments flexibles lors du survol */
+}
+
+
+/* Sidebar */
+/* Style de la barre de recherche */
+#search-bar {
+  background-color: #faf6e9;
+  width: 100%;
+  padding: 15px;
+  gap: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+/* Style de la boîte 02 */
+.box02{
+  background-color: #2c5d63; /* Couleur de fond */
+  position:fixed; /* Position fixe */
+  top: 0; /* En haut de la page */
+  left: 0; /* À gauche de la page */
+  overflow: auto; /* Défilement automatique si le contenu déborde */
+  margin-top: 60px; /* Marge en haut */
+  height: 100%; /* Hauteur totale */
+  width: 200px; /* Largeur fixe */
+  padding: 20px; /* Rembourrage */
+}
+
+  /* sidebar top */
+  /* Définition des couleurs principales */
+  :root {
+    --primary-color: #272727;
+    --text: white;
+    --background: #F4F5FC;
+    --sidebar-gray-background:#385170;
+    --red: #F55E5E;
+    --item-hover: #F0F0F0;
+    
+  }
+
+  /* menu links */
+  /* Style des liens du menu latéral */
+  .sidebar-links {
+    padding: 0.5rem 0px;
+    border-top: 1px solid var(
+      --sidebar-gray-background
+    );
+  }
+  
+  /* Style pour la liste non ordonnée dans les liens de la barre latérale */
+  .sidebar-links ul {
+    list-style-type: none;
+    position: relative;
+  }
+  
+  /* Style pour les éléments de liste dans les liens de la barre latérale */
+  .sidebar-links li {
+    color:#272727;
+  }
+  
+/* Style pour les éléments de liste dans les liens de la barre latérale lorsqu'ils sont repliés */
+.collapsed .sidebar-links li {
+  display: flex; /* Utilise un layout flexible */
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+}
+  
+/* Style pour les SVG dans les éléments de liste dans les liens de la barre latérale */
+  .sidebar-links li svg {
+    stroke: #272727;
+    transition: none;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  /* Style pour les liens dans les éléments de liste dans la barre latérale */
+  .sidebar-links li a {
+    padding: 0.75rem 0.75rem;
+    margin: 0.5rem 0;
+    color: var(--sidebar-gray-light);
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 3.5rem;
+    border-radius: 0.625rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Style pour les images dans les liens dans les éléments de liste dans la barre latérale */
+  .sidebar-links li a img {
+    height: 2.125rem;
+    width: 2.125rem;
+  }
+
+  /* Style pour les liens dans la barre latérale */
+  .sidebar-links .link {
+    margin-left: 1.875rem;
+  }
+
+  /* Style lors du survol d'un lien actif dans la barre latérale */
+  .sidebar-links .active:hover {
+    background-color: var(--primary-color);
+    color: var(--background);
+  }
+
+  /* Style lors du survol d'un SVG dans un lien actif dans la barre latérale */
+  .sidebar-links .active:hover svg {
+    stroke: var(--background);
+  }
+  
+  /* Style pour un lien actif dans la barre latérale */
+  .sidebar-links .active {
+    text-decoration: none;
+    background-color: var(
+      --primary-color
+    );
+    color: var(--background);
+  }
+  
+  /* Style pour un SVG dans un lien actif dans la barre latérale */
+  .sidebar-links .active svg {
+    stroke: var(--background);
+  }
+  
+  /* Style lors du survol d'un lien dans un élément de liste dans la barre latérale */
+  .sidebar-links li a:hover {
+    background-color: var(--item-hover);
+    color:#272727;
+  }
+  /* Style lors du survol d'un SVG dans un lien dans un élément de liste dans la barre latérale */
+  .sidebar-links li a:hover svg {
+    stroke: #272727;
+  }
+  
+  /* Style pour la notification */
+.notification {
+  position: absolute; /* Position absolue */
+  width: 1rem; /* Largeur fixe */
+  height: 1rem; /* Hauteur fixe */
+  border-radius: 50%; /* Rayon de la bordure pour un cercle parfait */
+  background-color: var(--red); /* Couleur de fond */
+  top: -0.1875rem; /* Position en haut */
+  border: 0.1875rem solid var(--background); /* Bordure */
+  right: -0.1875rem; /* Position à droite */
+}
+
+/* Style pour le bouton d'expansion lorsque le corps est replié */
+body.collapsed .expand-btn {
+  justify-content: center; /* Centre les éléments horizontalement */
+  margin-top: auto; /* Marge en haut automatique */
+}
+
+/* Style lors du survol du bouton d'expansion */
+.expand-btn:hover {
+  background-color: var(--item-hover); /* Change la couleur de fond */
+}
+
+/* Style pour le bouton d'expansion */
+.expand-btn {
+  display: flex; /* Utilise un layout flexible */
+  justify-content: start; /* Aligne les éléments au début */
+  align-items: center; /* Centre les éléments verticalement */
+  cursor: pointer; /* Curseur en forme de main */
+  gap: 0.5rem; /* Espacement entre les éléments */
+  color: var(--primary-color); /* Couleur du texte */
+  border-radius: 0.5rem; /* Rayon de la bordure */
+  padding: 0.5rem; /* Rembourrage */
+}
+
+/* Style pour les images dans le bouton d'expansion */
+.expand-btn img {
+  transform: rotate(180deg); /* Tourne l'image de 180 degrés */
+  stroke: var(--primary-color); /* Couleur du trait */
+  width: 2.375rem; /* Largeur fixe */
+  height: 2.375rem; /* Hauteur fixe */
+}
+
+/* Style pour les images dans le bouton d'expansion lorsque le corps est replié */
+body.collapsed .expand-btn img {
+  transform: rotate(-360deg); /* Tourne l'image de -360 degrés */
+}
+
+  /* Style pour l'infobulle */
+.tooltip {
+  position: relative; /* Position relative */
+}
+
+/* Style pour le contenu de l'infobulle */
+.tooltip .tooltip__content {
+  visibility: hidden; /* L'infobulle est initialement cachée */
+  background-color: var(--primary-color); /* Couleur de fond de l'infobulle */
+  color: var(--text); /* Couleur du texte de l'infobulle */
+  text-align: center; /* Texte centré dans l'infobulle */
+  border-radius: 0.375rem; /* Rayon de la bordure de l'infobulle */
+  padding: 0.375rem 0.75rem; /* Rembourrage de l'infobulle */
+  position: absolute; /* Position absolue */
+  z-index: 1; /* Niveau de superposition */
+  left: 4.6875rem; /* Position à gauche */
+}
+
+/* Style pour le contenu de l'infobulle lors du survol d'une infobulle repliée */
+.collapsed .tooltip:hover .tooltip__content {
+  visibility: visible; /* L'infobulle devient visible */
+}
+
+/* Footer part  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* footer reset */
+main {
+    height: 100%;
+}
+
+/* footer containers */
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2c5d63;
+    width: 100%;
+    height: 40%;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}   
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 64rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Style pour les colonnes du pied de page */
+.footer-columns {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+
+}
+
+/* Style pour la colonne du logo du pied de page */
+.footer-logo-column {
+    padding-right: 20px;
+}
+
+/* Style pour l'image */
+.pic{
+  height: 220px;
+  width: 220px;
+}
+
+/* Style pour le logo du pied de page */
+.footer-logo {
+  margin-bottom: 1.5rem; /* Marge en bas */
+  width: 14rem; /* Largeur fixe */
+}
+
+/* Style pour les liens dans les liens sociaux */
+.social-links a {
+  color:#7E7E7E; /* Couleur du texte */
+  text-decoration: none; /* Pas de décoration du texte */
+}
+
+/* Style pour les SVG dans les liens sociaux */
+.social-links svg {
+  width: 2.5rem; /* Largeur fixe */
+  height: 2.5rem; /* Hauteur fixe */
+  stroke: #7E7E7E; /* Couleur du trait */
+  transition: all 0.2s ease-in-out; /* Transition pour tous les changements */
+}
+
+/* Style lors du survol d'un SVG dans les liens sociaux */
+.social-links svg:hover {
+  stroke: #F9F9F9; /* Change la couleur du trait */
+}
+
+/* Style pour la liste non ordonnée dans les liens sociaux */
+.social-links ul {
+  display: flex; /* Utilise un layout flexible */
+  flex-wrap: wrap; /* Les éléments peuvent se déplacer sur plusieurs lignes */
+  gap: 0.75rem; /* Espacement entre les éléments */
+  list-style-type: none; /* Pas de puces pour la liste */
+}
+
+/* columns with links */
+.link-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+/* Style pour les divs dans les colonnes de liens */
+.link-columns>div {
+  flex-grow: 1; /* Les éléments peuvent grandir pour occuper l'espace disponible */
+  display: flex; /* Utilise un layout flexible */
+  gap: 2rem; /* Espacement entre les éléments */
+}
+
+/* Style pour les sections dans les divs dans les colonnes de liens */
+.link-columns>div>section {
+  min-width: 8rem; /* Largeur minimale */
+  width: 50%; /* Largeur fixe */
+}
+
+/* Style pour les listes non ordonnées dans les colonnes de liens */
+.link-columns ul {
+  display: flex; /* Utilise un layout flexible */
+  gap: 1rem; /* Espacement entre les éléments */
+  list-style-type: none; /* Pas de puces pour la liste */
+  padding: 0; /* Pas de rembourrage */
+  margin: 0; /* Pas de marge */
+  flex-direction: column; /* Direction des éléments flexibles */
+  font-weight: 600; /* Poids de la police */
+}
+
+/* Style pour les liens dans les listes non ordonnées dans les colonnes de liens */
+.link-columns ul a {
+  color: #7E7E7E; /* Couleur du texte */
+  text-decoration: none; /* Pas de décoration du texte */
+  transition: all 0.2s ease-in-out; /* Transition pour tous les changements */
+}
+
+/* Style lors du survol d'un lien dans une liste non ordonnée dans les colonnes de liens */
+.link-columns ul a:hover {
+  color: #F9F9F9; /* Change la couleur du texte */
+}
+
+/* Style pour les titres h3 dans les colonnes de liens */
+.link-columns h3 {
+  color: #F9F9F9; /* Couleur du texte */
+  margin-bottom: 1.5rem; /* Marge en bas */
+  font-size: 1.1rem; /* Taille de la police */
+}
+
+
+/* Ce bloc de code est une règle CSS pour les écrans dont la largeur est supérieure ou égale à 600px. 
+C'est ce qu'on appelle une requête média, et elle est utilisée pour appliquer différents styles en fonction de la taille de l'écran. */
+@media screen and (min-width: 600px) {
+    .link-columns>div>section {
+        min-width: auto;
+    }
+}
+
+/* gallery  */
+/* Style pour la galerie */
+.gallery {
+  padding-top: 50px; /* Rembourrage en haut */
+  padding-left: 200px; /* Rembourrage à gauche */
+  padding-bottom: 50px; /* Rembourrage en bas */
+  display: grid; /* Utilise un layout en grille */
+  grid-template-columns: repeat(3, 1fr); /* Crée trois colonnes de taille égale */
+  grid-gap: 10px; /* Espacement entre les éléments de la grille */
+  margin-bottom: 70px; /* Marge en bas */
+}
+
+/* Style pour les images dans la galerie */
+.gallery img {
+  border-radius: 5%; /* Rayon de la bordure pour un effet arrondi */
+  width: 100%; /* Largeur totale */
+  transition: transform 0.2s ease; /* Transition pour la transformation */
+}
+
+/* Style lors du survol d'une image dans la galerie */
+.gallery img:hover {
+  transform: scale(1.1); /* Agrandit l'image */
+  z-index: 10; /* Place l'image au-dessus des autres éléments */
+}
+
+/* Style pour la boîte */
+.box{
+  width: 300px; /* Largeur fixe */
+  height: 300px; /* Hauteur fixe */
+}
+
+/* Style pour la galerie02 */
+.gallery02 {
+  padding-bottom: 60px; /* Rembourrage en bas */
+   position: static; /* Position statique */
+   display: flex; /* Utilise un layout flexible */
+   justify-content: center; /* Centre les éléments horizontalement */
+   left: calc(50% - 19rem); /* Position à gauche */
+   background: #faf6e9; /* Couleur de fond */
+   padding-top: 60px; /* Rembourrage en haut */
+   place-items: center; /* Place les éléments au centre */
+ }
+ 
+ /* Style pour la carte */
+ .card {
+   left: 0; /* À gauche de la page */
+   width: 14rem; /* Largeur fixe */
+   height: 15rem; /* Hauteur fixe */
+   background: #faf6e9; /* Couleur de fond */
+   border-radius: 0.5rem; /* Rayon de la bordure pour un effet arrondi */
+   transition: 0.4s ease-in-out; /* Transition pour tous les changements */
+   overflow: hidden; /* Cache le contenu débordant */
+   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); /* Ombre portée */
+ }
+ 
+ /* Style pour toutes les cartes sauf la première */
+ .card:not(:first-child) {
+   margin-left: -5rem; /* Marge à gauche négative */
+ }
+ 
+/* Style lors du survol d'une carte */
+.card:hover {
+  transform: translateY(-1rem); /* Déplace la carte vers le haut */
+  font-weight: bold; /* Rend le texte en gras */
+  cursor: pointer; /* Change le curseur en forme de main */
+}
+
+/* Style lors du survol d'une carte pour les autres cartes qui suivent */
+.card:hover ~ .card {
+  left: 2rem; /* Déplace les autres cartes vers la droite */
+}
+
+/* Style pour les images dans une carte */
+.card img {
+  height: 100%; /* Hauteur totale */
+  width: 100%; /* Largeur totale */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte tout en conservant son aspect */
+  border-radius: 0.25rem; /* Rayon de la bordure pour un effet arrondi */
+}
+
+
+/* partie news */
+:root {
+  --accent: rgb(212, 255, 0);
+  --accent-hover: rgb(190, 228, 0);
+  --accent-active: #72d534;
+  --control: #49aa00;
+  --secondary: #ECEFEB;
+  --secondary-hover: #E0E4DE;
+  --secondary-active: #6c6c6b;
+  --headline-color: rgba(100, 105, 150, 1);
+  --event-text: rgba(29, 32, 59, 1);
+  --success: rgba(80, 189, 85, 1);
+  --error: rgba(232, 113, 113, 1);
+  --white: rgba(255, 255, 255, 1);
+  --accent-text: #163300;
+}
+
+/* Style pour la barre du haut */
+.top-bar {
+  display: flex; /* Utilise un layout flexible */
+  gap: 16px; /* Espacement entre les éléments */
+  align-items: center; /* Centre les éléments verticalement */
+  width: 100%; /* Largeur totale */
+  flex-direction: row; /* Direction des éléments flexibles */
+  color: var(--headline-color); /* Couleur du texte */
+}
+
+/* Style pour les titres h2 dans la barre du haut */
+.top-bar h2 {
+  font-size: 1.2rem; /* Taille de la police */
+  font-weight: 700; /* Poids de la police */
+  line-height: 1.5rem; /* Hauteur de ligne */
+}
+
+/* Style pour les SVG dans la barre du haut */
+.top-bar svg {
+  color: var(--headline-color); /* Couleur du SVG */
+}
+
+/* Style pour les événements */
+#events {
+  display: flex; /* Utilise un layout flexible */
+  gap: 1.5rem; /* Espacement entre les éléments */
+  padding: 1rem 0px; /* Rembourrage en haut et en bas */
+  width: 100%; /* Largeur totale */
+  flex-direction: row; /* Direction des éléments flexibles */
+  overflow: auto; /* Défilement automatique si le contenu déborde */
+}
+
+/* Style pour un événement */
+.event {
+  appearance: none; /* Pas d'apparence par défaut */
+  text-decoration: none; /* Pas de décoration du texte */
+  transition: all 0.2s ease-in-out; /* Transition pour tous les changements */
+  min-width: 20rem; /* Largeur minimale */
+  cursor: pointer; /* Curseur en forme de main */
+  flex-direction: column; /* Direction des éléments flexibles */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  scroll-snap-align: start; /* Alignement au début pour le défilement */
+  overflow: hidden; /* Cache le contenu débordant */
+  color: rgba(29, 32, 59, 1); /* Couleur du texte */
+  position: static; /* Position statique */
+}
+
+/* Style pour l'image de l'événement */
+.event__image {
+  position: static; /* Position statique */
+}
+
+/* Style pour l'indicateur de l'événement */
+.event__indicator {
+  position:static; /* Position statique */
+  padding: 0.5rem; /* Rembourrage */
+  min-width: 3.5rem; /* Largeur minimale */
+  min-height: 3.5rem; /* Hauteur minimale */
+  display: flex; /* Utilise un layout flexible */
+  flex-direction: column; /* Direction des éléments flexibles */
+  justify-content: center; /* Centre les éléments verticalement */
+  background: var(--white); /* Couleur de fond */
+  align-items: center; /* Centre les éléments horizontalement */
+  border-radius: 0.5rem; /* Rayon de la bordure pour un effet arrondi */
+}
+
+/* Style pour la date de l'événement */
+.event__date {
+  top: 0.5rem; /* Position en haut */
+  left: 0.5rem; /* Position à gauche */
+  font-size: 1.35rem; /* Taille de la police */
+}
+
+/* Style pour le mois de la date de l'événement */
+.event__date__month {
+  font-size: 0.6rem; /* Taille de la police */
+  text-transform: uppercase; /* Texte en majuscules */
+  font-weight: bold; /* Poids de la police */
+  color: var(--event-headline); /* Couleur du texte */
+}
+
+/* Style pour le type de l'événement */
+.event__type {
+  top: 0.5rem; /* Position en haut */
+  right: 0.5rem; /* Position à droite */
+}
+
+/* Style pour le SVG du type de l'événement */
+.event__type svg {
+  color: var(--event-text); /* Couleur du SVG */
+  height: 2rem; /* Hauteur fixe */
+  width: 2rem; /* Largeur fixe */
+}
+
+/* Style pour la description de l'événement */
+.event-description {
+  color: var(--event-text); /* Couleur du texte */
+  padding: 0.5rem 0.75rem; /* Rembourrage */
+}
+
+/* Style pour l'image de l'événement */
+.event img {
+  width: 100%; /* Largeur totale */
+  height: 15rem; /* Hauteur fixe */
+  border-radius: 1rem; /* Rayon de la bordure pour un effet arrondi */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse l'élément tout en conservant son aspect */
+  object-position: top; /* Positionne l'image en haut */
+}
+
+/* Style pour le titre h2 de l'événement */
+.event h2 {
+  font-size: 1.375rem; /* Taille de la police */
+  letter-spacing: normal; /* Espacement normal entre les lettres */
+  overflow-wrap: normal; /* Pas de retour à la ligne automatique */
+  white-space: nowrap; /* Le texte ne passe pas à la ligne */
+  font-weight: 700; /* Poids de la police */
+  line-height: 1.25rem; /* Hauteur de ligne */
+  color: var(--event-headline); /* Couleur du texte */
+  overflow: hidden; /* Cache le texte débordant */
+  text-overflow: ellipsis; /* Affiche des points de suspension lorsque le texte déborde */
+}
+
+/* Style pour les statistiques du bas */
+.bottom-stats {
+  display: flex; /* Utilise un layout flexible */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  gap: 1rem; /* Espacement entre les éléments */
+  width: 100%; /* Largeur totale */
+  flex-direction: row; /* Direction des éléments flexibles */
+  color: var(--headline-color); /* Couleur du texte */
+}
+
+/* Style pour une statistique du bas */
+.bottom-stat {
+  display: flex; /* Utilise un layout flexible */
+  gap: 0.5rem; /* Espacement entre les éléments */
+  align-items: center; /* Centre les éléments verticalement */
+  flex-direction: row; /* Direction des éléments flexibles */
+}
+
+/* Style pour le conteneur */
+.container {
+  max-width: 50rem; /* Largeur maximale */
+  width: 100%; /* Largeur totale */
+  min-width: 18rem; /* Largeur minimale */
+  margin: 7.5rem auto; /* Marge automatique en haut et en bas */
+}
+
+/* Style pour le cercle */
+.circle {
+  height: 0.8rem; /* Hauteur fixe */
+  width: 0.8rem; /* Largeur fixe */
+  border-radius: 50%; /* Rayon de la bordure pour un cercle parfait */
+}
+
+/* Style pour la classe .booox */
+.booox{
+  font-family: 'Arvo'; /* Définit la police du texte */
+  height:200px; /* Hauteur fixe */
+  height: 100%; /* Hauteur totale (remplace la hauteur fixe précédente) */
+  width: 100%; /* Largeur totale */
+  display:flex; /* Utilise un layout flexible */
+  align-items:center; /* Centre les éléments verticalement */
+  justify-content:center; /* Centre les éléments horizontalement */
+  text-align:center; /* Texte centré */
+  padding-top: 10rem; /* Rembourrage en haut */
+  padding-bottom: 100px; /* Rembourrage en bas */
+  padding-left: 120px; /* Rembourrage à gauche */
+  background-image: url('images/zs31dakk.png'); /* Image de fond */
+  background-repeat: no-repeat; /* L'image de fond ne se répète pas */
+  background-attachment: fixed; /* L'image de fond est fixe */
+  background-size: 100% 75%; /* Taille de l'image de fond */
+}
+/* Style pour la classe .boooox */
+.boooox{
+  text-align:center; /* Texte centré */
+  text-transform: uppercase; /* Texte en majuscules */
+  color: #2c5d63; /* Couleur du texte */
+  font-size: 4rem; /* Taille de la police */
+}
+
+/* Style pour le roller */
+.roller{
+  height: 4.125rem; /* Hauteur fixe */
+  line-height: 4rem; /* Hauteur de ligne */
+  position: relative; /* Position relative */
+  overflow: hidden; /* Cache le contenu débordant */
+  width: 100%; /* Largeur totale */
+  display: flex; /* Utilise un layout flexible */
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  color: #faf6e9; /* Couleur du texte */
+}
+
+/* Style pour le texte qui défile dans le roller */
+.roller #rolltext {
+  position: absolute; /* Position absolue */
+  top: 0; /* En haut de la page */
+  animation: slide 6.5s infinite; /* Animation appelée 'slide', qui dure 6.5 secondes et se répète indéfiniment */
+}
+
+/* Définition de l'animation 'slide' */
+@keyframes slide {
+  0%{
+    top:0; /* Au début de l'animation, le texte est en haut de la page */
+  }
+  25%{
+    top: -4rem; /* À 25% de l'animation, le texte est déplacé de 4rem vers le haut */
+  }
+  50%{
+    top: -8rem; /* À 50% de l'animation, le texte est déplacé de 8rem vers le haut */
+  }
+  72.5%{
+    top: -12.25rem; /* À 72.5% de l'animation, le texte est déplacé de 12.25rem vers le haut */
+  }
+}
+/* Définition de l'animation 'fadeInMove' */
+@keyframes fadeInMove {
+  0% {
+    opacity: 0; /* Au début de l'animation, l'élément est complètement transparent */
+    transform: translateY(20px); /* L'élément est déplacé de 20px vers le bas */
+  }
+  100% {
+    opacity: 1; /* À la fin de l'animation, l'élément est complètement opaque */
+    transform: translateY(0); /* L'élément revient à sa position initiale */
+  }
+}
+
+/* Style pour la classe .titres */
+.titres{
+  padding-left: 250px; /* Rembourrage à gauche */
+  padding-right: 60px; /* Rembourrage à droite */
+  padding-top: 40px; /* Rembourrage en haut */
+  font-size: 20px; /* Taille de la police */
+ }
+ 
+ /* Style pour les titres h1 dans la classe .titres */
+ .titres>h1{
+   color: #2c5d63; /* Couleur du texte */
+   font-family: Georgia, 'Times New Roman', Times, serif; /* Police du texte */
+   padding-bottom: 25px; /* Rembourrage en bas */
+ }
+ 
+ /* Style pour les paragraphes dans la classe .titres */
+ .titres>p{
+   font-family: Verdana; /* Police du texte */
+   padding-bottom: 20px; /* Rembourrage en bas */
+ }
+ 
+:root {
+  --background: #F8F8FF;
+  --text: #2C2C2C;
+}
+
+/* Style pour la classe .articles */
+.articles {
+  position: static; /* Position statique */
+  display: flex; /* Utilise un layout flexible */
+  flex-wrap: wrap; /* Les éléments peuvent se déplacer sur plusieurs lignes */
+  margin: 0 auto; /* Marge automatique en haut et en bas */
+  justify-content: center; /* Centre les éléments horizontalement */
+  max-width: 1200px; /* Largeur maximale */
+  gap: 1.5rem; /* Espacement entre les éléments */
+  margin-top: 30px; /* Marge en haut */
+  margin-bottom: 70px; /* Marge en bas */
+}
+
+/* Style pour un article dans la classe .articles */
+.articles article {
+  max-width: 20rem; /* Largeur maximale */
+  width: 100%; /* Largeur totale */
+  cursor: pointer; /* Curseur en forme de main */
+  position: static; /* Position statique */
+  display: block; /* Affichage en bloc */
+  transition: all 0.4s ease-in-out; /* Transition pour tous les changements */
+  overflow: hidden; /* Cache le contenu débordant */
+  border-radius: 1rem; /* Rayon de la bordure pour un effet arrondi */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Ombre portée */
+}
+
+/* Style pour les titres h2 dans un article */
+.articles article h2 {
+  margin: 0 0 0.5rem 0; /* Marge */
+  font-size: 1.6rem; /* Taille de la police */
+  color: var(--text); /* Couleur du texte */
+  transition: color 0.3s ease-out; /* Transition pour la couleur */
+}
+
+/* Style pour les images dans un article */
+.articles article img {
+  position: static;
+  max-width: 100%; /* Largeur maximale */
+  transform-origin: center; /* Origine de la transformation au centre */
+  transition: transform 0.4s ease-in-out; /* Transition pour la transformation */
+  height: 100%; /* Hauteur totale */
+  aspect-ratio: 16 / 9; /* Ratio d'aspect */
+  overflow: hidden; /* Cache le contenu débordant */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse l'élément tout en conservant son aspect */
+}
+
+/* Style lors du survol d'une image dans un article */
+.articles article:hover img {
+  transform: scale(1.5); /* Agrandit l'image */
+}
+
+/* Style pour la prévisualisation de l'article */
+.article-preview {
+  padding: 1.5rem; /* Rembourrage */
+  background: white; /* Couleur de fond */
+}
+
+/* Style pour la figure dans les articles */
+.articles figure {
+  width: 100%; /* Largeur totale */
+  height: 14rem; /* Hauteur fixe */
+  overflow: hidden; /* Cache le contenu débordant */
+}
+
+.map {
+  display: flex; /* Utilisez flexbox pour un alignement côte à côte */
+  justify-content: space-between; /* Espacement entre la carte et les informations de contact */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 20px; /* Ajoutez un peu d'espace autour des éléments */
+  padding-bottom: 100px;
+}
+
+.map-container,
+.contact-info {
+  flex-basis: 50%; /* Chaque conteneur prendra la moitié de l'espace disponible */
+}
+
+.map-container {
+  padding-right: 10px; /* Ajoutez un peu d'espace à droite de la carte */
+}
+
+.contact-info {
+  padding-left: 10px; /* Ajoutez un peu d'espace à gauche des informations de contact */
+  text-align: left; /* Alignez le texte des informations de contact à gauche */
+}
+
+

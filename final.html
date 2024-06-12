@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Définit l'encodage des caractères pour le document -->
+    <meta charset="UTF-8">
+    <!-- Rend la page web réactive. Elle s'adapte à la taille de l'écran de l'appareil utilisé -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Définit le titre du document -->
+    <title>Departement informatique</title>
+    <!-- Lie la feuille de style CSS 'final.css' au document HTML -->
+    <link rel="stylesheet" href="final.css">
+    <!-- Lie le fichier JavaScript 'final.js' au document HTML -->
+    <script src="final.js"></script>
+    <!-- Définit l'icône du site web (favicon). Le type de fichier est PNG et le fichier est 'beige.png' -->
+    <link rel="website icon" type="png" href="images/beige(1).png">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+    
+</head>
+<body>
+    <!-- le munu du debut de la page  -->
+    <nav class="box01">
+        <!-- Le menu supérieur de la barre de navigation -->
+        <div class="menutop">
+            <!-- Le logo du site web -->
+            <img src="images/back-fotor-bg-remover-20240420104116.png" alt="Logo" class="logo">
+            <!-- Le titre du site web -->
+            <div class="titre">
+                <h3 class="book">Universite Alger 1</h3>
+                <p class="book">Departement informatique</p>
+                </div>
+        </div>
+         <!-- La liste des éléments de navigation du site web -->
+        <ul class="navigation">
+             <!-- Un lien vers la page d'accueil -->
+            <li>
+                <a href="final.html" title="Accueil">
+                    Accueil
+                </a>
+            </li>
+             <!-- Un lien vers la page de la bibliothèque avec un sous-menu -->
+            <li>
+                <a href="" title="Bibliothèque">
+                    Bibliothèque
+                    <!-- Une icône de flèche vers le bas pour indiquer la présence d'un sous-menu -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </a>
+                <!-- Le sous-menu de la bibliothèque -->
+                <div class="subnavigation__wrapper">
+                    <ul>
+                        <li>
+                            <a href="bib inscription.html" title="Inscription">
+                                Inscription
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chercher un livre.html" title="Recherche">
+                                Recherche
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Un lien vers la page de Réclamation -->
+                <a href="" title="Réclamation">
+                    Réclamation
+                    <!-- Une icône de flèche vers le bas pour indiquer la présence d'un sous-menu -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </a>
+                <!-- Le sous-menu de la page de Réclamation -->
+                <div class="subnavigation__wrapper">
+                    <ul>
+                         <!-- Un lien vers la page enseignant -->
+                        <li>
+                            <a href="enseignant.html" title="Enseignant">
+                                <span class="link-inner">Enseignant</span>
+                            </a>
+                        </li>
+                         <!-- Un lien vers la page etudiants -->
+                        <li>
+                            <a href="etudiant.html" title=" Étudiant">
+                                Étudiant
+                            </a>
+                        </li>
+                        <li>
+                             <!-- Un lien vers la page des autres -->
+                            <a href="autre.html" title="Autre ">
+                                Autre 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="connect">
+                <!-- Un lien vers la page de connexion -->
+                <a  href="connecter.html">connecter</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- sidebar -->
+    <nav class="box02">
+        <div id="sidebar">
+            <!-- Barre de recherche -->
+            <input type="text" id="search-bar" placeholder="Rechercher...">
+        </div>
+        <div class="sidebar-links">
+            <ul>
+              <li>
+                <!-- Ceci est un lien vers la page d'accueil -->
+                <a href="final.html" title="Accueil" class="tooltip">
+                     <!-- Ceci est l'icône de la maison pour la page d'accueil -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+                    <path d="M10 12h4v4h-4z"></path>
+                  </svg>
+                  <span class="link hide">Accueil</span>
+                  <span class="tooltip__content">Accueil</span>
+                </a>
+              </li>
+              <li>
+                 <!-- Ceci est un lien vers la page de l'emploi du temps -->
+                <a href="mainpa.html" title="Emploie du temps" class="tooltip">
+                    <!-- Ceci est l'icône pour l'emploi du temps -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-dashboard" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 4h6v8h-6z"></path>
+                    <path d="M4 16h6v4h-6z"></path>
+                    <path d="M14 12h6v8h-6z"></path>
+                    <path d="M14 4h6v4h-6z"></path>
+                  </svg>
+                  <span class="link hide">EDT</span>
+                  <span class="tooltip__content">EDT</span>
+                </a>
+              </li>
+              <li>
+                <!-- Ceci est un lien vers la page des listes des étudiants -->
+                <a href="index1.html" title="Les listes des Etudiants" class="tooltip">
+                    <!-- Ceci est l'icône pour les listes des étudiants -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                  </svg>
+                  <span class="link hide">Listes.E</span>
+                  <span class="tooltip__content">Listes.E</span>
+                </a>
+              </li>
+              <li>
+                <!-- Ceci est un lien vers la page des listes des professeurs -->
+                <a href="index2.html" title="Les listes des professeurs" class="tooltip">
+                    <!-- Ceci est l'icône pour les listes des professeurs -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 16l2 -6l6 -2l-2 6l-6 2"></path>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  </svg>
+                  <span class="link hide">Listes.P</span>
+                  <span class="tooltip__content">Listes.P</span>
+                </a>
+              </li>
+              <li>
+                <!-- Ceci est un lien vers la page de réclamation -->
+                <a href="Main.html" title=" Réclamation" class="tooltip">
+                  <div style="position: relative;">
+                    <!-- Ceci est l'icône pour la page de réclamation -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-graph" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                      <path d="M7 14l3 -3l2 2l3 -3l2 2"></path>
+                    </svg>
+                    <div class="notification"></div>
+                  </div>
+                  <span class="link hide"> Réfutation</span>
+                  <span class="tooltip__content"> Réfutation</span>
+                </a>
+              </li>
+              </ul>
+              </li>
+            </ul>
+          </div>
+      </nav>
+
+
+      <div class="booox">
+        <!-- Ceci est le titre principal -->
+        <h1 class="boooox"> Ministère De L'enseignement Supérieur
+            <!-- Ceci est une div avec une classe "roller" -->
+            <div class="roller">
+                 <!-- Ceci est un span avec un id "rolltext" -->
+          <span id="rolltext">Université Alger 1 <br>
+            Benyoucef Benkhedda<br/>
+            Faculté Des Sciences<br/>
+            Département Informatique <br/>
+          </div>
+          </h1>
+        </div>
+
+
+        <div class="titres">
+            <!-- Ceci est le titre principal -->
+            <h1>Université d’Alger 1</h1>
+            <!-- Ceci est un paragraphe décrivant l'université d'Alger Benyoucef-Benkhedda -->
+            <p>L’université d’Alger Benyoucef-Benkhedda, également connue sous le surnom de la « Faculté centrale d’Alger », est une institution universitaire algérienne fondée en 1909, elle est la première université algérienne et regroupe actuellement huit facultés.
+                <br>Le département informatique est rattaché à la faculté des sciences, qui regroupe plusieurs départements, dont ceux des sciences de la nature et de la vie, des sciences de la matière, des mathématiques et de l’informatique. La faculté est située au niveau d’Alger-Centre, rue Didouche Mourad.
+                <br>le département d’informatique propose des formations dans le domaine de l’informatique, couvrant des sujets tels que la programmation, les bases de données, les réseaux, l’intelligence artificielle et bien plus encore. Les étudiants acquièrent des compétences pratiques et théoriques pour relever les défis du monde numérique.</p>
+        </div>
+        <img style="margin-top: 30px;margin-bottom: 20px; width: 1100px;height: 500px;border-radius: 20px;" src="images/zs31dakk.png" alt="université alger 01">
+
+
+        <!-- Un conteneur pour les titres -->
+        <div class="titres">
+            <!-- Le titre principal de la page -->
+            <h1>Bienvenue dans notre Galerie du Département Informatique !</h1>
+             <!-- Un paragraphe de texte décrivant le contenu de la galerie -->
+            <p>Cette galerie est un espace dédié à la découverte de notre faculté et de ses activités. Vous y trouverez des photos capturant des moments mémorables, des événements, des projets étudiants et bien plus encore. Explorez notre galerie pour plonger dans l’univers dynamique de l’informatique, où la créativité et la passion se rencontrent.</p>
+        </div>
+
+
+      <!-- gallery  --> 
+      <!-- Un conteneur pour la galerie d'images -->
+      <!-- Chaque image dans la galerie est représentée par une balise <img> avec la classe "box" -->
+      <div class="gallery">
+        <!-- Image 1 -->
+        <img class="box" src="http://sciences.univ-alger.dz/wp-content/uploads/2023/05/IMG-20230518-WA0024.jpg" alt="Image 1">
+        <!-- Image 2 -->
+        <img class="box" src="http://sciences.univ-alger.dz/wp-content/uploads/2024/01/421635249_345617498320103_6738389579187417474_n.jpg" alt="Image 2">
+        <!-- Image 3 -->
+        <img class="box" src="http://sciences.univ-alger.dz/wp-content/uploads/2023/02/IMG-047a78b985d89d1f79cacc0198860416-V-1024x652-1.jpg" alt="Image 3">
+        <!-- Image 4 -->
+        <img class="box" src="http://sciences.univ-alger.dz/wp-content/uploads/2023/07/357718930_232653509616503_817063939384741835_n.jpg">
+        <!-- Image 5 -->
+        <img class="box" src="http://sciences.univ-alger.dz/wp-content/uploads/2023/05/IMG-20230518-WA0025.jpg" alt="Image 5">
+        <!-- Image 6 -->
+        <img class="box" src="http://sciences.univ-alger.dz/wp-content/uploads/2023/05/348419791_1082870673101719_1605839020290254255_n.jpg" alt="Image 6">
+      </div>
+      
+
+      <div class="titres">
+        <!-- Ceci est le titre principal de la section "Actualités" -->
+        <h1>Bienvenue dans la section “Actualités” du Département Informatique !</h1>
+        <!-- Ceci est un paragraphe décrivant la section "Actualités" -->
+        <p >Cette rubrique est dédiée à tout ce qui se passe au sein de notre département. Vous y trouverez les dernières informations sur les événements, les conférences, les projets étudiants, les avancées technologiques et bien plus encore. Restez à l’affût des nouveautés et des opportunités passionnantes !</p>
+    </div>
+
+
+      <!-- partie news  -->
+      <!-- Début de la section des actualités -->
+      <div style="margin-top: 55px;margin-bottom: 30px;" class="container">
+        <!-- Barre supérieure de la section des actualités -->
+        <div class="top-bar">
+            <!-- Titre de la section des actualités -->
+            <h2>
+                News
+            </h2>
+        </div>
+        <!-- Conteneur pour les événements -->
+        <div id="events">
+        <!-- Chaque événement est représenté par un lien avec la classe "event" -->
+        <!-- Premier événement -->
+            <a href="#the-weeknd" class="event">
+                <!-- Image de l'événement -->
+                <div class="event__image">
+                    <img src="https://www.univ-alger.dz/wp-content/uploads/2024/04/modele-site2023-12-6.jpg" alt="">
+                    <div class="event__indicator event__date">
+                        <!-- Date de l'événement -->
+                        08 <div class="event__date__month">
+                            Avr
+                        </div>
+                    </div>
+                </div>
+                <!-- Description de l'événement -->
+                <div class="event-description">
+                    <h3>
+                        Célébration de la Journée mondiale de la santé 
+                    </h3>
+                    <!-- Statistiques de l'événement -->
+                    <div class="bottom-stats">
+                        <div class="bottom-stat">
+                            <div class="circle circle--red"></div>
+                            Safais 14 Jours
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Chaque événement est représenté par un lien avec la classe "event" -->
+            <!-- 2eme événement -->
+            <a href="#the-weeknd" class="event">
+                <div class="event__image">
+                    <!-- Image de l'événement -->
+                    <img src="https://www.univ-alger.dz/wp-content/uploads/2024/04/modele-site2023-12-8.jpg"
+                        alt="">
+                        <!-- Date de l'événement -->
+                    <div class="event__indicator event__date">
+                        16 <div class="event__date__month">
+                            Avr
+                        </div>
+                    </div>
+                </div>
+                <!-- Description de l'événement -->
+                <div class="event-description">
+                    <h3>
+                        Une cérémonie de remise des prix dans le cadre des célébrations de la Journée du Savoir.
+                    </h3>
+                    <!-- Statistiques de l'événement -->
+                    <div class="bottom-stats">
+                        <div class="bottom-stat">
+                            <div class="circle circle--red"></div>
+                            Safais 6 Jours
+                        </div>
+                    </div>
+                </div>
+            </a>
+       <!-- Chaque événement est représenté par un lien avec la classe "event" -->
+        <!-- 3eme événement -->
+            <a href="#the-weeknd" class="event">
+                <!-- Image de l'événement -->
+                <div class="event__image">
+                    <img src="https://www.univ-alger.dz/wp-content/uploads/2023/12/expositionFR.jpg"
+                        alt="">
+                        <!-- Date de l'événement -->
+                    <div class="event__indicator event__date">
+                        20 <div class="event__date__month">
+                            Avr
+                        </div>
+                    </div>
+                </div>
+                 <!-- Description de l'événement -->
+                <div class="event-description">
+                    <h3>
+                        Exposition pour encourager l’entrepreneuriat chez les jeunes
+                    </h3>
+                    <!-- Statistiques de l'événement -->
+                    <div class="bottom-stats">
+                        <div class="bottom-stat">
+                            <div class="circle circle--red"></div>
+                            Safais 2 Jours
+                        </div>
+                    </div>
+                </div>
+            </a>
+        <!-- Chaque événement est représenté par un lien avec la classe "event" -->
+        <!-- 4eme événement -->
+            <a href="#the-weeknd" class="event">
+                <!-- Image de l'événement -->
+                <div class="event__image">
+                    <img src="https://www.univ-alger.dz/wp-content/uploads/2023/02/324398469_854179172474773_2102596107705430634_n-1-800x445-1.jpg"
+                        alt="">
+                        <!-- Date de l'événement -->
+                    <div class="event__indicator event__date">
+                        22 <div class="event__date__month">
+                            Avr
+                        </div>
+                    </div>
+                </div>
+                 <!-- Description de l'événement -->
+                <div class="event-description">
+                    <h3>
+                        Conférence national des universités
+                    </h3>
+                    <!-- Statistiques de l'événement -->
+                    <div class="bottom-stats">
+                        <div class="bottom-stat">
+                            <div class="circle circle--red"></div>
+                            Safais 29 Minutes
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="titres">
+        <!-- Ceci est le titre principal de la section "Galerie des Clubs" -->
+     <h1>Bienvenue dans notre Galerie des Clubs du Département Informatique !</h1>
+      <!-- Ceci est un paragraphe décrivant la galerie des clubs -->
+        <p>Cette galerie est un espace dédié à la richesse et à la diversité des clubs étudiants au sein de notre département. <br>
+            Que vous soyez intéressé par la programmation, la cybersécurité, l’intelligence artificielle ou tout autre domaine, nos clubs sont là pour vous accueillir. 
+            Explorez notre galerie et découvrez les opportunités de rejoindre ces communautés dynamiques. Que ce soit lors d’ateliers, de compétitions ou de projets, chaque club contribue à l’enrichissement de l’expérience étudiante.
+        </p>
+    </div>
+
+
+        <!-- Début de la galerie d'images -->
+      <div class="gallery02">
+        <!-- Chaque figure représente une carte d'un club avec une image et un titre -->
+    <!-- Carte du club Open Source -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">Open Source club </p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.univ-alger.dz/wp-content/uploads/2023/02/313271579_121937450687095_3657956583834928826_n.jpg"
+                    alt="Lakeview Elegance preview">
+            </figure>
+            <!-- Carte du club Quanta -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">Quanta club </p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.univ-alger.dz/wp-content/uploads/2023/02/276317730_5110973578965210_1319042260321355979_n.jpg"
+                    alt="Skyline Oasis preview">
+            </figure>
+            <!-- Carte du club LEAD -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">LEAD Club </p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.univ-alger.dz/wp-content/uploads/2023/02/311300373_478209874353326_2858074803146322125_n.jpg"
+                    alt="Vista Paradiso preview" >
+            </figure>
+            <!-- Carte du club Kutsch -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">Kutsch club </p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.univ-alger.dz/wp-content/uploads/2023/02/274733907_100948812541020_1468948779570754239_n.jpg"
+                    alt="Villa Verde preview" >
+            </figure>
+            <!-- Carte du club CSE -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">CSE club </p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.esi.dz/wp-content/uploads/2021/04/cse-1-150x150.jpg"
+                    alt="Lakeview Elegance preview">
+            </figure>
+            <!-- Carte du club ETIC -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">ETIC Club </p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.esi.dz/wp-content/uploads/2021/05/ETIC-1-300x211.png"
+                    alt="Skyline Oasis preview" >
+            </figure>
+            <!-- Carte du club GDG Alger -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">GDG Algiers</p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.esi.dz/wp-content/uploads/2021/05/GDG-1-150x150.png"
+                    alt="Vista Paradiso preview">
+            </figure>
+            <!-- Carte du club School of AI -->
+            <figure class="card">
+                <!-- Titre du club -->
+                <p style="display: flex;justify-content: center;">School of AI </p>
+                <!-- Image du club -->
+                <img
+                    src="https://www.esi.dz/wp-content/uploads/2021/04/School-AI-1-150x150.jpg"
+                    alt="Villa Verde preview">
+            </figure>
+        </div> 
+
+
+        <div class="titres">
+            <!-- Ceci est le titre principal de la section "Dates Importantes" -->
+            <h1>  Bienvenue dans la section “Dates Importantes” du Département Informatique !  </h1>
+             <!-- Ceci est un paragraphe décrivant la section "Dates Importantes" -->
+            <p>Cette rubrique est un calendrier virtuel où vous trouverez les moments clés de notre département. Des conférences aux ateliers, en passant par les dates limites des projets, tout est répertorié ici. Restez informé et ne manquez aucune occasion de vous impliquer et d’apprendre.
+            </p>
+        </div>
+
+        <!-- Début de la section des articles pour les dates importantes -->
+        <div class="articles">
+             <!-- Chaque date est représenté par une balise <article> -->
+            <!-- Premier article "Date 1" -->
+            <article>
+                <figure>
+                    <!-- Image de l'article -->
+                    <img src="images/etudiant.jpg" alt="">
+                </figure>
+                <!-- Prévisualisation de l'article -->
+                <div class="article-preview">
+                    <!-- La date de l'article -->
+                    <h2>Lundi 11/05/2024</h2>
+                    <!-- Contenu de l'article -->
+                    <p>
+                        Cette date marque le début des examens du deuxième semestre.Bonne chance à tous les étudiants!
+                    </p>
+                </div>
+            </article>
+            <!-- 2eme article "Date 2" -->
+            <article>
+                <figure>
+                    <!-- Image de l'article -->
+                    <img src="images/reclamation.jpg" alt="">
+                </figure>
+                <!-- Prévisualisation de l'article -->
+                <div class="article-preview">
+                    <!-- Date de l'article -->
+                    <h2>Mardi 14/05/2024</h2>
+                    <!-- Contenu de l'article -->
+                    <p>
+                        Date limite pour le dépôt des PFE de 3ème année de licence.Bon courage à tous les étudiants pour la finalisation de leurs projets !
+                    </p>
+                </div>
+            </article>
+            <!-- 3eme article "Date 3" -->
+            <article>
+                <figure>
+                    <!-- Image de l'article -->
+                    <img src="images/prof.jpg" alt="">
+                </figure>
+                <!-- Prévisualisation de l'article -->
+                <div class="article-preview">
+                    <!-- Date de l'article -->
+                    <h2>Jeudi 16/05/2024</h2>
+                    <!-- Contenu de l'article -->
+                    <p>
+                        Date limite pour le dépôt des Projets de Fin d’Études de Master 1 et 2.  Bonne chance à tous les étudiants pour la finalisation de leurs projets!
+                    </p>
+                </div>
+            </article>
+            <!-- 4eme article "Date 4" -->
+            <article>
+                <figure>
+                    <!-- Image de l'article -->
+                    <img src="images/emploi.jpg" alt="Autumn Forest">
+                </figure>
+                <!-- Prévisualisation de l'article -->
+                <div class="article-preview">
+                    <!-- Date de l'article -->
+                    <h2>Dimanche 19/05/2024</h2>
+                    <!-- Contenu de l'article -->
+                    <p>
+                        Date des délibérations pour tous les niveaux de licence.C’est le jour où les résultats des examens sont annoncés. Nous souhaitons à tous les étudiants la meilleure des chances pour ces délibérations !
+                    </p>
+                </div>
+            </article>
+            <!-- 5eme article "Date 5" -->
+            <article>
+                <figure>
+                    <!-- Image de l'article -->
+                    <img src="images/Beige Books Icon.jpg" alt="">
+                </figure>
+                <!-- Prévisualisation de l'article -->
+                <div class="article-preview">
+                    <!-- Date de l'article -->
+                    <h2>Mardi 21/05/2024</h2>
+                    <!-- Contenu de l'article -->
+                    <p>
+                        Début de la session de rattrapage pour tous les niveaux.’une seconde chance pour réussir. Nous souhaitons à tous les étudiants beaucoup de succès pour cette session de rattrapage !
+                    </p>
+                </div>
+            </article>
+        </div>
+
+
+        <div class="titres">
+            <!-- Ceci est le titre principal de la section "Bibliothèque" -->
+            <h1>Bienvenue dans la section “Bibliothèque” du Département Informatique !</h1>
+            <!-- Ceci est un paragraphe décrivant la bibliothèque et ses services -->
+            <p style="padding-bottom: 5px;">Notre bibliothèque est un trésor de connaissances et de ressources pour les étudiants et les enseignants. Voici ce que vous pouvez y trouver :
+                <br>1. Inscription à la Bibliothèque : L’inscription est nécessaire pour emprunter des documents, accéder au réseau WiFi et bénéficier d’autres services.</p><a style="padding-bottom: 20px;" href="bib inscription.html">Vous pouvez vous inscrire en ligne sur le site de la Bibliothèque Universitaire d’Alger.</a> 
+                <br><p style="padding-bottom: 5px;">2. Recherche de Livres : Vous cherchez un livre spécifique ? Utilisez notre catalogue en ligne pour trouver des ouvrages pertinents.
+                </p><a style="padding-bottom: 20px;" href="chercher un livre.html">Cherchez un livre.</a>
+        </div>
+         <!-- Ceci est une image illustrant la bibliothèque -->
+        <img style="width: 1200px;height: 500px;padding-bottom: 40px;border-radius: 8%;padding-left: 120px;" src="images/Zoom Virtual Backgrounds Backdrop Home Office Bookshelf Bookcase Microsoft Teams Facebook WebEx _ Google Background digital backdrop.jpg" alt="">
+
+        
+        <div class="titres">
+             <!-- Titre principal de la section -->
+            <h1>Bienvenue dans la section “Statistiques” du Département Informatique !</h1>
+             <!-- Description de la section -->
+            <p>Cette rubrique est dédiée à l’analyse et à la visualisation des données liées à notre département. </p>
+        </div>
+
+
+        <!-- partie pour les statistiques du Departement -->
+        <div style="padding-bottom: 30px;" class="articles">
+            <!-- Ceci est le premier article concernant les enseignants -->
+            <article>
+                <figure>
+                     <!-- Ceci est une image représentant les enseignants -->
+                    <img src="images/green icons.jpg" alt="enseignants">
+                </figure>
+                 <!-- Ceci est la prévisualisation de l'article sur les enseignants -->
+                <div class="article-preview">
+                    <h2>134 Enseignants</h2>
+                    <!-- Ceci est le contenu de l'article sur les enseignants -->
+                    <p>
+                        Le département d’informatique de notre université est un véritable pôle d’excellence, rassemblant une équipe pédagogique dévouée et hautement qualifiée. En effet, nous avons l’honneur de compter 134 enseignants au sein de notre département.
+                    </p>
+                </div>
+            </article>
+            <!-- Ceci est le deuxième article concernant les étudiants -->
+            <article>
+                <figure>
+                    <!-- Ceci est une image représentant les étudiants -->
+                    <img src="images/etd2.jpg" alt="Etudiants">
+                </figure>
+                <!-- Ceci est la prévisualisation de l'article sur les étudiants -->
+                <div class="article-preview">
+                    <h2>3256 Etudiants</h2>
+                     <!-- Ceci est le contenu de l'article sur les étudiants -->
+                    <p>
+                        Notre département d’informatique est un véritable carrefour d’apprentissage et de découverte, accueillant une population étudiante dynamique .
+                        Notre département compte 3256 étudiants.Nous sommes déterminés à leur fournir les meilleures opportunités d’apprentissage.
+                    </p>
+                </div>
+            </article>
+             <!-- Ceci est le troisième article concernant les ATS -->
+            <article>
+                <figure>
+                     <!-- Ceci est une image représentant les ATS -->
+                    <img src="images/livros icon.jpg" alt="ATS">
+                </figure>
+                 <!-- Ceci est la prévisualisation de l'article sur les ATS -->
+                <div class="article-preview">
+                    <h2>124 ATS</h2>
+                    <!-- Ceci est le contenu de l'article sur les ATS -->
+                    <p>
+                        Notre département d’informatique est soutenu par une équipe solide et dévouée de 124 Attachés Temporaires d’Enseignement et de Recherche (ATS). Ces professionnels jouent un rôle essentiel dans le fonctionnement quotidien de notre département.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="titres">
+            <!-- Titre comme un message de remerciement  -->
+           <h1>Nous vous remercions chaleureusement d’avoir exploré notre site </h1>
+           <h1 style="padding-left: 280px; padding-bottom: 30px;">du Département d’Informatique!</h1>
+           <p>Pour toute question ou besoin, n’hésitez pas à nous contacter.Nous vous invitons également à visiter nos locaux pour découvrir notre université.</p>
+       </div>
+
+       <div class="map">
+        <!-- Conteneur principal pour la carte et les informations de contact -->
+        <div class="map-container">
+          <!-- Intégration de Google Maps pour afficher la localisation de l'Université d'Alger 1 -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.997106486756!2d3.052753174768009!3d36.770636872255494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb258e74b7123%3A0xa31d6cb06299dd5b!2sUniversit%C3%A9%20d'Alger%201!5e0!3m2!1sfr!2sdz!4v1715475511959!5m2!1sfr!2sdz"
+            width="500"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="contact-info">
+          <!-- Informations de contact de l'Université d'Alger 1 -->
+          <h1 style="color: #2c5d63; padding-bottom: 20px;">Nous sommes là pour vous !</h1>
+          <i class="fa-sharp fa-solid fa-phone"></i>
+          <h3> Téléphone: +213 21 63 00 00</h3> <!-- Numéro de téléphone -->
+          <i class="fa-sharp fa-solid fa-envelope"></i>
+          <h3>Email: info@univ-alger.dz</h3> <!-- Adresse email -->
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>2 Rue Didouche Mourad, Alger Centre 16000, Algeria</h3> <!-- Adresse postale -->
+        </div>
+      </div>
+      
+    <!-- Footer part  -->
+    <!-- Ceci est le pied de page du site -->
+<footer> 
+    <!-- Ajoutez ceci à votre fichier HTML existant dans la section du footer -->
+<div class="footer-right">
+    <div class="map-container">
+      <!-- Remplacez le 'src' par le lien de votre carte Google Maps -->
+      <div class="footer-wrapper">
+          <div class="footer-columns">
+              <div class="footer-logo-column">
+                 <!-- Ceci est un lien vers la page d'accueil -->
+                  <a href="final.html" aria-label="home oage" title="Go to Homepage">
+                    <!-- Ceci est une image "logo" dans le pied de page -->
+                      <img class="pic" src="images/back-fotor-bg-remover-20240420104116.png" alt="">
+                  <div class="social-wrapper">
+                      <div class='social-links'>
+                          <ul>
+                            <!-- Ceci est un lien vers le compte Twitter -->
+                              <li>
+                                  <a href="https://twitter.com/" title="Twitter">
+                                      <svg xmlns="http://www.w3.org/2000/svg"
+                                          class="icon icon-tabler icon-tabler-brand-x" width="24" height="24"
+                                          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                          stroke-linecap="round" stroke-linejoin="round">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                          <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                                          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                                      </svg>
+                                  </a>
+                              </li>
+                              <!-- Ceci est un lien vers le compte GitHub -->
+                              <li>
+                                  <a href="https://github.com/" title="GitHub">
+                                      <svg xmlns="http://www.w3.org/2000/svg"
+                                          class="icon icon-tabler icon-tabler-brand-github" width="24" height="24"
+                                          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                          stroke-linecap="round" stroke-linejoin="round">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                          <path
+                                              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                                      </svg>
+                                  </a>
+                              </li>
+                              <!-- Ceci est un lien vers le compte Discord -->
+                              <li>
+                                  <a href="https://discord.com/" title="Discord">
+                                      <svg xmlns="http://www.w3.org/2000/svg"
+                                          class="icon icon-tabler icon-tabler-brand-discord" width="24" height="24"
+                                          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                          stroke-linecap="round" stroke-linejoin="round">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                          <path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                                          <path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                                          <path
+                                              d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" />
+                                          <path d="M7 16.5c3.5 1 6.5 1 10 0" />
+                                      </svg>
+                                  </a>
+                              </li>
+                               <!-- Ceci est un lien vers le compte Youtube -->
+                              <li>
+                                  <a href="https://www.youtube.com/" title="Youtube">
+                                      <svg xmlns="http://www.w3.org/2000/svg"
+                                          class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24"
+                                          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                          stroke-linecap="round" stroke-linejoin="round">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                          <path
+                                              d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+                                          <path d="M10 9l5 3l-5 3z" />
+                                      </svg>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+               <!-- Ceci est la colonne de liens du pied de page -->
+              <div class="link-columns">
+                  <div>
+                    <!-- Ceci est la section Bibliothèque du pied de page -->
+                      <section>
+                          <h3>Bibliothèque</h3>
+                          <ul>
+                            <!-- Ceci est un lien vers la page d'inscription de la bibliothèque -->
+                              <li>
+                                  <a href="bib inscription.html" title="Inscription">Inscription</a>
+                              </li>
+                              <!-- Ceci est un lien vers la page de recherche de la bibliothèque-->
+                              <li>
+                                  <a href="chercher un livre.html" title="Recherche">Recherche</a>
+                              </li>
+                          </ul>
+                      </section>
+                      <!-- Ceci est la section des liens des listes -->
+                      <section>
+                          <h3>Les listes</h3>
+                          <ul>
+                            <!-- Ceci est un lien vers la page des listes des étudiants -->
+                              <li>
+                                  <a href="index2.html" title="Listes des etudiants">Des etudiants</a>
+                              </li>
+                              <!-- Ceci est un lien vers la page des listes des professeurs -->
+                              <li>
+                                  <a href="index2.html" title="Listes des professeurs">Des professeurs</a>
+                              </li>
+                          </ul>
+                      </section>
+                  </div>
+                  <div>
+                     <!-- Ceci est la section des liens des emplois L1/L2 -->
+                      <section>
+                          <h3>Emplois L1/L2</h3>
+                          <ul>
+                              <li>
+                                  <a href="emploila1.html" title="L1 section A">L1 section A</a>
+                              </li>
+                              <li>
+                                  <a href="emploib1.html" title="L1 section B">L1 section B</a>
+                              </li>
+                              <li>
+                                  <a href="emploib2.html" title="L1 section C">L1 section C</a>
+                              </li>
+                              <li>
+                                  <a href="emploic2.html" title="L1 section D">L1 section D</a>
+                              </li>
+                              <li>
+                                  <a href="emploia2.html" title="L2 section A">L2 section A </a>
+                              </li>
+                              <li>
+                                  <a href="emploib2.html" title="L2 section B">L2 section B</a>
+                              </li>
+                              <li>
+                                  <a href="emploic2.html" title="L2 sction C">L2 section C</a>
+                              </li>
+                          </ul>
+                      </section>
+                    <!-- Ceci est la section des liens des emplois L3/Master -->
+                      <section>
+                          <h3>Emplois L3/Master</h3>
+                          <ul>
+                              <li>
+                                  <a href="emploiisil.html" title="L3 ISIL">
+                                      L3 ISIL
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="emploisi.html" title="L3 SI">
+                                      L3 SI
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="emploiasd.html" title="M1 ASD">
+                                      M1 ASD
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="emploirse2.html" title="M1 RSE">
+                                      M1 RSE
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="emploiisil2.html" title="M2 ISIL">
+                                      M2 ISIL
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="emploirse.html" title="M2 RSE">
+                                      M2 RSE
+                                  </a>
+                              </li>
+                          </ul>
+                      </section>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+</body>
+</html>
